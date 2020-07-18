@@ -3,6 +3,8 @@
 # You may need to import some classes of the controller module. Ex:
 #  from controller import Robot, Motor, DistanceSensor
 from controller import Robot
+from controller import Camera
+
 import math
 
 # create the Robot instance.
@@ -32,6 +34,11 @@ motor_lst = [
 ]
 #  ds = robot.getDistanceSensor('dsname')
 #  ds.enable(timestep)
+
+camera = Camera("camera_d435i")
+camera.enable(15)
+print(camera.getSamplingPeriod())
+camera.saveImage("~/test.png", 100)
 
 # Main loop:
 # - perform simulation steps until Webots is stopping the controller

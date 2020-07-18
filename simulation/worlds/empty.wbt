@@ -5,6 +5,21 @@ DEF colossus Robot {
   translation 0.05999964696683244 0.7798317894926188 -9.806608584633948e-06
   rotation -0.9997468326925393 0.005580287200882004 0.02179749792961724 1.2516835561727449e-05
   children [
+    DEF d435i_shape Transform {
+      translation -0.12 0.08 -0.08
+      children [
+        Camera {
+          name "camera_d435i"
+          width 480
+          height 270
+        }
+        Shape {
+          geometry Box {
+            size 0.09 0.025 0.025
+          }
+        }
+      ]
+    }
     DEF leg3_servo0 Servo {
       translation -0.129987 0 0.130012
       rotation 0 1 0 -1.5707
@@ -482,16 +497,24 @@ DEF colossus Robot {
   physics Physics {
   }
   controller "my_controller"
-  linearVelocity 2.0367817996612876e-08 3.87476480530798e-10 -2.029491748271883e-07
-  angularVelocity 4.925565545939542e-08 -3.8217075696531e-06 1.1105707514633225e-09
 }
 Viewpoint {
-  orientation 0.05354560154900955 -0.9792363554211077 -0.19552245082429934 3.905323471555116
-  position 2.00721410009481 1.8590218883860836 -2.289245980949964
+  orientation 0.37548656793152874 -0.8977363722612492 -0.23038932966223385 5.230325332721912
+  position 2.726694534647964 2.0987317588769336 1.771805093380862
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 Floor {
+}
+DEF Wall Transform {
+  translation 0 0 -1.35
+  children [
+    Shape {
+      geometry Box {
+        size 3 1 0.1
+      }
+    }
+  ]
 }
