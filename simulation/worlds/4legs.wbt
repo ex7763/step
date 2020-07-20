@@ -1,264 +1,12 @@
 #VRML_SIM R2020a utf8
 WorldInfo {
-  contactProperties [
-    ContactProperties {
-      coulombFriction [
-        10
-      ]
-    }
-  ]
 }
 DEF colossus Robot {
   translation 0.05999964696683244 0.7798317894926188 -9.806608584633948e-06
   rotation -0.9997468326925393 0.005580287200882004 0.02179749792961724 1.2516835561727449e-05
   children [
-    DEF Jeston_Nano Transform {
-      translation -0.13 0.07 0
-      children [
-        Shape {
-          appearance Appearance {
-            material Material {
-              diffuseColor 0.7 1 0.7
-            }
-          }
-          geometry Box {
-            size 0.08704 0.02 0.0674
-          }
-        }
-      ]
-    }
-    DEF leg5_servo0 Servo {
-      translation -0.0593658 0 0.112332
-      rotation 0 1 0 5.235987755982989
-      children [
-        DEF leg5_servo1 Servo {
-          translation 0.079092 0.0320184 0
-          rotation 0 0 1 1.5708
-          children [
-            DEF servo1_shape Transform {
-              children [
-                Shape {
-                  appearance Appearance {
-                    material Material {
-                      diffuseColor 1 0.8 0.8
-                    }
-                  }
-                  geometry Box {
-                    size 0.03 0.03 0.03
-                  }
-                }
-              ]
-            }
-            DEF leg5_servo2 Servo {
-              translation 1.6e-07 -0.39 0
-              rotation 0 0 1 1.5708
-              children [
-                DEF servo2_shape Transform {
-                  children [
-                    Shape {
-                      appearance Appearance {
-                        material Material {
-                          diffuseColor 1 0.8 0.8
-                        }
-                      }
-                      geometry Box {
-                        size 0.03 0.03 0.03
-                      }
-                    }
-                  ]
-                }
-                DEF leg2 Transform {
-                  translation -0.2 0 0
-                  rotation 0 0 1 1.5708
-                  children [
-                    Shape {
-                      appearance Appearance {
-                        material Material {
-                        }
-                      }
-                      geometry Box {
-                        size 0.01 0.4 0.01
-                      }
-                    }
-                  ]
-                }
-              ]
-              name "leg5_servo2"
-              boundingObject USE leg2
-              physics Physics {
-              }
-              position -5.567852891584277e-07
-            }
-            DEF leg1 Transform {
-              translation 0 -0.19 0
-              children [
-                Shape {
-                  appearance Appearance {
-                    material Material {
-                    }
-                  }
-                  geometry Box {
-                    size 0.01 0.4 0.01
-                  }
-                }
-              ]
-            }
-          ]
-          name "leg5_servo1"
-          boundingObject USE leg1
-          physics Physics {
-          }
-          position 9.848550475169584e-07
-        }
-        DEF servo0_shape Transform {
-          translation -0.02 0.03 0
-          children [
-            Shape {
-              appearance Appearance {
-                material Material {
-                  diffuseColor 1 0.8 0.8
-                }
-              }
-              geometry Box {
-                size 0.03 0.03 0.03
-              }
-            }
-          ]
-        }
-        DEF leg0 Transform {
-          translation 0.034 0.03 0
-          children [
-            Shape {
-              geometry Box {
-                size 0.1 0.01 0.01
-              }
-            }
-          ]
-        }
-      ]
-      name "leg5_servo0"
-      boundingObject USE leg0
-      physics Physics {
-      }
-      position -4.866556994733529e-07
-    }
-    DEF leg4_servo0 Servo {
-      translation -0.200607 0 0.112332
-      rotation 0 1 0 4.1887902047863905
-      children [
-        DEF leg4_servo1 Servo {
-          translation 0.079092 0.0320184 0
-          rotation 0 0 1 1.5708
-          children [
-            DEF servo1_shape Transform {
-              children [
-                Shape {
-                  appearance Appearance {
-                    material Material {
-                      diffuseColor 1 0.8 0.8
-                    }
-                  }
-                  geometry Box {
-                    size 0.03 0.03 0.03
-                  }
-                }
-              ]
-            }
-            DEF leg4_servo2 Servo {
-              translation 1.6e-07 -0.39 0
-              rotation 0 0 1 1.5708
-              children [
-                DEF servo2_shape Transform {
-                  children [
-                    Shape {
-                      appearance Appearance {
-                        material Material {
-                          diffuseColor 1 0.8 0.8
-                        }
-                      }
-                      geometry Box {
-                        size 0.03 0.03 0.03
-                      }
-                    }
-                  ]
-                }
-                DEF leg2 Transform {
-                  translation -0.2 0 0
-                  rotation 0 0 1 1.5708
-                  children [
-                    Shape {
-                      appearance Appearance {
-                        material Material {
-                        }
-                      }
-                      geometry Box {
-                        size 0.01 0.4 0.01
-                      }
-                    }
-                  ]
-                }
-              ]
-              name "leg4_servo2"
-              boundingObject USE leg2
-              physics Physics {
-              }
-              position -5.567852891584277e-07
-            }
-            DEF leg1 Transform {
-              translation 0 -0.19 0
-              children [
-                Shape {
-                  appearance Appearance {
-                    material Material {
-                    }
-                  }
-                  geometry Box {
-                    size 0.01 0.4 0.01
-                  }
-                }
-              ]
-            }
-          ]
-          name "leg4_servo1"
-          boundingObject USE leg1
-          physics Physics {
-          }
-          position 9.848550475169584e-07
-        }
-        DEF servo0_shape Transform {
-          translation -0.02 0.03 0
-          children [
-            Shape {
-              appearance Appearance {
-                material Material {
-                  diffuseColor 1 0.8 0.8
-                }
-              }
-              geometry Box {
-                size 0.03 0.03 0.03
-              }
-            }
-          ]
-        }
-        DEF leg0 Transform {
-          translation 0.034 0.03 0
-          children [
-            Shape {
-              geometry Box {
-                size 0.1 0.01 0.01
-              }
-            }
-          ]
-        }
-      ]
-      name "leg4_servo0"
-      boundingObject USE leg0
-      physics Physics {
-      }
-      position -4.866556994733529e-07
-    }
     DEF d435i_shape Transform {
-      translation -0.13 0.06 -0.07
+      translation -0.12 0.08 -0.08
       children [
         Camera {
           name "camera_d435i"
@@ -266,11 +14,6 @@ DEF colossus Robot {
           height 270
         }
         Shape {
-          appearance Appearance {
-            material Material {
-              diffuseColor 0.4 0.4 1
-            }
-          }
           geometry Box {
             size 0.09 0.025 0.025
           }
@@ -278,8 +21,8 @@ DEF colossus Robot {
       ]
     }
     DEF leg3_servo0 Servo {
-      translation -0.259987 0 1.2e-05
-      rotation 0 1 0 3.141592653589793
+      translation -0.129987 0 0.130012
+      rotation 0 1 0 -1.5707
       children [
         DEF leg3_servo1 Servo {
           translation 0.079092 0.0320184 0
@@ -393,8 +136,8 @@ DEF colossus Robot {
       position -4.866556994733529e-07
     }
     DEF leg2_servo0 Servo {
-      translation -0.19474 0 -0.106962
-      rotation 0 1 0 2.0943951023931953
+      translation -0.26 0 -1.39334e-08
+      rotation 0 1 0 3.1415926
       children [
         DEF leg2_servo1 Servo {
           translation 0.079092 0.0320184 0
@@ -508,8 +251,8 @@ DEF colossus Robot {
       position -4.866556994733529e-07
     }
     DEF leg1_servo0 Servo {
-      translation -0.0630368 0 -0.108672
-      rotation 0 1 0 1.0471975511965976
+      translation -0.119998 0 -0.130012
+      rotation 0 1 0 1.5707
       children [
         DEF leg1_servo1 Servo {
           translation 0.079092 0.0320184 0
@@ -741,12 +484,10 @@ DEF colossus Robot {
         Shape {
           appearance Appearance {
             material Material {
-              diffuseColor 0.8 0.8 1
             }
           }
-          geometry Cylinder {
-            height 0.03
-            radius 0.1
+          geometry Box {
+            size 0.2 0.03 0.2
           }
         }
       ]
@@ -758,8 +499,8 @@ DEF colossus Robot {
   controller "my_controller"
 }
 Viewpoint {
-  orientation 0.5428647529273136 -0.7976515493097573 -0.26277341173130664 5.320174815535402
-  position 1.678915273539888 2.3405508308204 1.715210875499561
+  orientation 0.37548656793152874 -0.8977363722612492 -0.23038932966223385 5.230325332721912
+  position 2.726694534647964 2.0987317588769336 1.771805093380862
 }
 TexturedBackground {
 }

@@ -31,6 +31,14 @@ motor_lst = [
     robot.getMotor('leg3_servo0'),
     robot.getMotor('leg3_servo1'),
     robot.getMotor('leg3_servo2'),
+    
+    robot.getMotor('leg4_servo0'),
+    robot.getMotor('leg4_servo1'),
+    robot.getMotor('leg4_servo2'),
+    
+    robot.getMotor('leg5_servo0'),
+    robot.getMotor('leg5_servo1'),
+    robot.getMotor('leg5_servo2'),
 ]
 #  ds = robot.getDistanceSensor('dsname')
 #  ds.enable(timestep)
@@ -46,7 +54,7 @@ while robot.step(timestep) != -1:
 
     #motor_lst[0].setPosition(10.0)
     #motor_lst[0].setVelocity(1.0)
-    for i in range(4):
+    for i in range(6):
     
         motor_lst[1 + i*3].setPosition(math.pi * -3 / 8)
         motor_lst[1 + i*3].setVelocity(1.0)
