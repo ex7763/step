@@ -3,7 +3,7 @@ WorldInfo {
   contactProperties [
     ContactProperties {
       coulombFriction [
-        10
+        5
       ]
     }
   ]
@@ -12,6 +12,31 @@ DEF colossus Robot {
   translation 0.05999964696683244 0.7798317894926188 -9.806608584633948e-06
   rotation -0.9997468326925393 0.005580287200882004 0.02179749792961724 1.2516835561727449e-05
   children [
+    InertialUnit {
+      translation -0.06 0.05 0
+      children [
+        Shape {
+          geometry Box {
+            size 0.0155 0.003 0.021
+          }
+        }
+      ]
+      name "inertial_unit"
+    }
+    Gyro {
+      translation -0.06 0.05 0
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+            }
+          }
+          geometry Box {
+            size 0.0155 0.003 0.021
+          }
+        }
+      ]
+    }
     DEF Jeston_Nano Transform {
       translation -0.13 0.07 0
       children [
@@ -758,14 +783,12 @@ DEF colossus Robot {
   controller "my_controller"
 }
 Viewpoint {
-  orientation 0.5428647529273136 -0.7976515493097573 -0.26277341173130664 5.320174815535402
-  position 1.678915273539888 2.3405508308204 1.715210875499561
+  orientation 0.3413211926105597 -0.9148483677109773 -0.21575983771653504 5.2926231852877486
+  position 3.2187865876231654 2.478478746634774 2.622291248409415
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
-}
-Floor {
 }
 DEF Wall Transform {
   translation 0 0 -1.35
@@ -776,4 +799,6 @@ DEF Wall Transform {
       }
     }
   ]
+}
+Floor {
 }
